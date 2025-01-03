@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="cs">
 
 <head>
   <meta charset="utf-8">
@@ -13,7 +13,7 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <img src="..." alt="...">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,35 +21,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Sluchátka</a>
+            <a class="nav-link" href="#">Sluchátka</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Reproduktory</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Zimní slevy
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Zimní akce</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Hledat" aria-label="Search">
-          <button class="btn btn-info" type="submit"><img src="img/lupa.png" alt="lupa" height="30"></button>
+          <button class="btn btn-primary" type="submit"><img src="img/lupa.png" alt="lupa" height="30"></button>
         </form>
-        <div class="">
-
+        <div>
           <div class="dropdown">
-            <button class="mx-2 p-2 px-3 btn btn-warning dropdown-toggle text-white mt-2" type="button"
+            <button class="mx-2 p-2 px-3 btn btn-primary dropdown-toggle text-white mt-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <a href=""><img src="img/kosik.png" alt="kosik" height="30"></a>
+              <a href="#"><img src="img/kosik.png" alt="kosik" height="30"></a>
             </button>
             <ul class="dropdown-menu">
               <li><button class="dropdown-item" type="button">Action</button></li>
@@ -96,115 +85,123 @@
   </div>
 
   <div class="d-flex container">
-    <!-- Sidebar -->
+    <!-- Filtrace -->
     <div class="border-end d-none d-md-block px-5" id="sidebar">
       <h4 class="text-center py-3 ">Filtrace</h4>
       <ul class="nav flex-column">
         <li class="nav-item">
           <h5 class="nav-link text-dark text-center">Barva</h5>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="Černá">
+            <label class="form-check-label" for="Černá">
               Černá
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
+            <input class="form-check-input" type="checkbox" value="" id="Fialová">
+            <label class="form-check-label" for="Fialová">
               Fialová
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="Bílá">
+            <label class="form-check-label" for="Bílá">
               Bílá
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
+            <input class="form-check-input" type="checkbox" value="" id="Béžová">
+            <label class="form-check-label" for="Béžová">
               Béžová
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="Modrá">
+            <label class="form-check-label" for="Modrá">
               Modrá
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
+            <input class="form-check-input" type="checkbox" value="" id="Šedá">
+            <label class="form-check-label" for="Šedá">
               Šedá
             </label>
           </div>
         </li>
+
         <li class="nav-item">
           <h5 class="nav-link text-dark text-center">Cena</h5>
-          <input type="range" class="form-range" id="customRange1">
+          <div>
+            <div class="mb-3">
+              <input type="range" class="form-range" id="priceRange" min="0" max="50000" step="100" value="25000" oninput="updateValue(this.value)">
+              <p><span id="rangeValue">25 000</span> Kč</p>
+            </div>
+          </div>
         </li>
+
         <li class="nav-item">
           <h5 class="nav-link text-dark text-center">Typ</h5>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Přeshlavu">
+            <label class="form-check-label" for="Přeshlavu">
               Přes hlavu
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Reproduktor">
+            <label class="form-check-label" for="Reproduktor">
               Reproduktor
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Špunty">
+            <label class="form-check-label" for="Špunty">
               Špunty
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Pecky">
+            <label class="form-check-label" for="Pecky">
               Pecky
             </label>
           </div>
         </li>
+
         <li class="nav-item">
           <h5 class="nav-link text-dark text-center">Značka</h5>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="Apple">
+            <label class="form-check-label" for="Apple">
               Apple
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
+            <input class="form-check-input" type="checkbox" value="" id="SONY">
+            <label class="form-check-label" for="SONY">
               SONY
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="JBL">
+            <label class="form-check-label" for="JBL">
               JBL
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
+            <input class="form-check-input" type="checkbox" value="" id="Marshall">
+            <label class="form-check-label" for="Marshall">
               Marshall
             </label>
           </div>
         </li>
-        <a class="text-center my-3" href="#"><button type="button" class="btn btn-primary">Filtrovat</button></a>
       </ul>
+      <a href="#" class="btn btn-primary">Filtrovat</a>
     </div>
 
     <!-- Main Content -->
     <div class="flex-grow-1 p-3">
 
-
+<!--Řazení-->
       <div class="container">
         <ul class="nav nav-tabs">
           <li class="nav-item">
@@ -219,30 +216,62 @@
         </ul>
       </div>
 
+      <!--Cards-->
       <div class="container my-5">
-        <div class="row row-cols-1 row-cols-md-3 g-4 container">
+        <div class="row row-cols-1 row-cols-xxl-3 row-cols-md-2 g-4 container">
           <div class="col">
             <div class="card">
-              <img src="img/bezdratova-sluchatka-jbl-tune-720bt-cerna.jpg" class="card-img-top" alt="...">
+              <img src="img/bezdratova-sluchatka-jbl-tune-720bt-cerna.jpg" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title text-center ">JBL Tune 720BT černá</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="row">
                   <p class="h4 col">1 990,-</p>
-                  <a href="#" class="btn btn-warning text-white col"><img src="img/kosik.png" alt="kosik" height="30" ></a>
+                  <a href="#" class="btn btn-primary text-white col">Detail</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
-              <img src="..." class="card-img-top" alt="...">
+              <img src="img/Airpods_max.png" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Apple AirPods Max</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-warning text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
+                  <div class="row">
+                    <p class="h4 col">14 490,-</p>
+                    <a href="#" class="btn btn-primary text-white col">Detail</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="img/JBL_wave.png" class="card-img-top" alt="Sluchátka">
+              <div class="card-body">
+                <h5 class="card-title">JBL Wave 200TWS</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                  <div class="row">
+                    <p class="h4 col">1 439,-</p>
+                    <a href="#" class="btn btn-primary text-white col">Detail</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="img/Marshall_majorIV.png" class="card-img-top mt-2" alt="Sluchátka">
+              <div class="card-body">
+                <h5 class="card-title">Marshall Major IV </h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                  <div class="row">
+                    <p class="h4 col">2 499,-</p>
+                    <a href="#" class="btn btn-primary text-white col">Detail</a>
+                  </div>
               </div>
             </div>
           </div>
@@ -253,7 +282,7 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-warning text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
+                <a href="#" class="btn btn-primary text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
               </div>
             </div>
           </div>
@@ -264,29 +293,49 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-warning text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
+                <a href="#" class="btn btn-primary text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
-              <img src="..." class="card-img-top" alt="...">
+              <img src="img/Airpods_max.png" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Apple AirPods Max</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-warning text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
+                  <div class="row">
+                    <p class="h4 col">14 490,-</p>
+                    <a href="#" class="btn btn-primary text-white col">Detail</a>
+                  </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
-              <img src="..." class="card-img-top" alt="...">
+              <img src="img/JBL_wave.png" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">JBL Wave 200TWS</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                <a href="#" class="btn btn-warning text-white"><img src="img/kosik.png" alt="kosik" height="30"></a>
+                  <div class="row">
+                    <p class="h4 col">1 439,-</p>
+                    <a href="#" class="btn btn-primary text-white col">Detail</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="img/Marshall_majorIV.png" class="card-img-top" alt="Sluchátka">
+              <div class="card-body">
+                <h5 class="card-title">Marshall Major IV </h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                  <div class="row">
+                    <p class="h4 col">2 499,-</p>
+                    <a href="#" class="btn btn-primary text-white col">Detail</a>
+                  </div>
               </div>
             </div>
           </div>
@@ -294,6 +343,61 @@
       </div>
     </div>
   </div>
+<div class="bg-primary bg-opacity-75 my-5 py-5">
+<div class="container ">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="img/img2.jpeg" class="card-img-top" alt="Gaming">
+        <div class="card-body">
+          <h3 class="card-title">HERNÍ SLUCHÁTKA</h3>
+          <p class="card-text">Zvuk, se kterým přežiješ.</p>
+          <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/img1.jpg" class="card-img-top" alt="JBL Sluchátka">
+        <div class="card-body">
+          <h3 class="card-title">NEJLEPŠÍ JBL SLUCHÁTKA</h3>
+          <p class="card-text">Prodlužte si záruku na 3 roky.</p>
+          <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/img3.jpg" class="card-img-top" alt="pecky a Špunty">
+        <div class="card-body">
+          <h3 class="card-title">CHCETE PECKY NEBO ŠPUNTY?</h3>
+          <p class="card-text">Pecky nebo špunty? Vyberte si svůj styl poslechu!</p>
+          <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/img4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">REPRODUKTORY MARSHALL</h3>
+          <p class="card-text">Stylové reproduktory Marshall s prvotřídním zvukem.</p>
+          <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -315,7 +419,13 @@
     });
   </script>
 
-
+<script>
+  // Aktualizace hodnoty při posunu slideru
+  function updateValue(value) {
+    const formattedValue = new Intl.NumberFormat('cs-CZ').format(value);
+    document.getElementById('rangeValue').textContent = formattedValue;
+  }
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

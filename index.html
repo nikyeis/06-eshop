@@ -7,6 +7,8 @@
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -50,28 +52,16 @@
     </div>
   </nav>
 
-  <div id="carouselExampleCaptions" class="carousel slide container">
+  <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
+        <img src="..." class="d-block w-100" alt="slide1">
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
+        <img src="..." class="d-block w-100" alt="slide2">
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
+        <img src="..." class="d-block w-100" alt="slide3">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -90,7 +80,7 @@
       <h4 class="text-center py-3 ">Filtrace</h4>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <h5 class="nav-link text-dark text-center">Barva</h5>
+          <h5 class="nav-link text-dark text-center fw-bolder">Barva</h5>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="Černá">
             <label class="form-check-label" for="Černá">
@@ -130,7 +120,7 @@
         </li>
 
         <li class="nav-item">
-          <h5 class="nav-link text-dark text-center">Cena</h5>
+          <h5 class="nav-link text-dark text-center fw-bolder">Cena</h5>
           <div>
             <div class="mb-3">
               <input type="range" class="form-range" id="priceRange" min="0" max="50000" step="100" value="25000" oninput="updateValue(this.value)">
@@ -140,7 +130,7 @@
         </li>
 
         <li class="nav-item">
-          <h5 class="nav-link text-dark text-center">Typ</h5>
+          <h5 class="nav-link text-dark text-center fw-bolder">Typ</h5>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="Přeshlavu">
             <label class="form-check-label" for="Přeshlavu">
@@ -168,7 +158,7 @@
         </li>
 
         <li class="nav-item">
-          <h5 class="nav-link text-dark text-center">Značka</h5>
+          <h5 class="nav-link text-dark text-center fw-bolder">Značka</h5>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="Apple">
             <label class="form-check-label" for="Apple">
@@ -194,6 +184,22 @@
             </label>
           </div>
         </li>
+
+        <li class="nav-item">
+          <h5 class="nav-link text-dark text-center fw-bolder">Funkce</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="ANC">
+            <label class="form-check-label" for="ANC">
+              ANC
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="zvuk">
+            <label class="form-check-label" for="zvuk">
+              Režim okolní zvuk
+            </label>
+          </div>
+        </li>
       </ul>
       <a href="#" class="btn btn-primary mt-2">Filtrovat</a>
     </div>
@@ -214,8 +220,154 @@
             <a class="nav-link" href="#">Dle hodnocení</a>
           </li>
         </ul>
-      </div>
 
+        <div class=" d-sm-none d-block">
+          <button class="btn btn-outline-primary my-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+          Filtrace
+        </button>
+        
+
+        
+        
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              <h4 class="text-center py-3 ">Filtrace</h4>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <h5 class="nav-link text-dark text-center fw-bolder">Barva</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Černá1">
+                    <label class="form-check-label" for="Černá1">
+                      Černá
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Fialová1">
+                    <label class="form-check-label" for="Fialová1">
+                      Fialová
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Bílá1">
+                    <label class="form-check-label" for="Bílá1">
+                      Bílá
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Béžová1">
+                    <label class="form-check-label" for="Béžová1">
+                      Béžová
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Modrá1">
+                    <label class="form-check-label" for="Modrá1">
+                      Modrá
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Šedá1">
+                    <label class="form-check-label" for="Šedá1">
+                      Šedá
+                    </label>
+                  </div>
+                </li>
+        
+                <li class="nav-item">
+                  <h5 class="nav-link text-dark text-center fw-bolder">Cena</h5>
+                  <div>
+                    <div class="mb-3">
+                      <input type="range" class="form-range" id="priceRange1" min="0" max="50000" step="100" value="25000" oninput="updateValue(this.value)">
+                      <p><span id="rangeValue1">25 000</span> Kč</p>
+                    </div>
+                  </div>
+                </li>
+        
+                <li class="nav-item">
+                  <h5 class="nav-link text-dark text-center fw-bolder">Typ</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Přeshlavu1">
+                    <label class="form-check-label" for="Přeshlavu1">
+                      Přes hlavu
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Reproduktor1">
+                    <label class="form-check-label" for="Reproduktor1">
+                      Reproduktor
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Špunty1">
+                    <label class="form-check-label" for="Špunty1">
+                      Špunty
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Pecky1">
+                    <label class="form-check-label" for="Pecky1">
+                      Pecky
+                    </label>
+                  </div>
+                </li>
+        
+                <li class="nav-item">
+                  <h5 class="nav-link text-dark text-center fw-bolder">Značka</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Apple1">
+                    <label class="form-check-label" for="Apple1">
+                      Apple
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Sony1">
+                    <label class="form-check-label" for="Sony1">
+                      Sony
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="JBL1">
+                    <label class="form-check-label" for="JBL1">
+                      JBL
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Marshall1">
+                    <label class="form-check-label" for="Marshall1">
+                      Marshall
+                    </label>
+                  </div>
+                </li>
+        
+                <li class="nav-item">
+                  <h5 class="nav-link text-dark text-center fw-bolder">Funkce</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ANC1">
+                    <label class="form-check-label" for="ANC1">
+                      ANC
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="zvuk1">
+                    <label class="form-check-label" for="zvuk1">
+                      Režim okolní zvuk
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <div class="text-center">
+              <a href="#" class="btn btn-primary mt-2">Filtrovat</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+</div>
       <!--Cards-->
       <div class="container my-5">
         <div class="row row-cols-1 row-cols-xxl-3 row-cols-md-2 g-4 container">
@@ -223,9 +375,8 @@
             <div class="card">
               <img src="img/bezdratova-sluchatka-jbl-tune-720bt-cerna.jpg" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
-                <h5 class="card-title text-center ">JBL Tune 720BT černá</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <h5 class="card-title text-center ">JBL Tune 720BT</h5>
+                <p class="card-text">Bezdrátová sluchátka - s mikrofonem, přes hlavu, okolo uší, pasivní potlačení hluku, uzavřená konstrukce</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="h4 ">1 990,-</p>
                   <a href="#" class="btn btn-primary">Detail</a>
@@ -238,8 +389,7 @@
               <img src="img/Airpods_max.png" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title">Apple AirPods Max</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Bezdrátová sluchátka - s mikrofonem, přes hlavu, okolo uší, aktivní potlačení hluku (ANC), uzavřená konstrukce</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4 ">14 490,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -252,8 +402,7 @@
               <img src="img/JBL_wave.png" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title">JBL Wave 200TWS</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Bezdrátová sluchátka - s mikrofonem, True Wireless, špunty, polouzavřená konstrukce, Bluetooth 5.0</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4 ">1 439,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -266,8 +415,7 @@
               <img src="img/Marshall_majorIV.png" class="card-img-top mt-2" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title">Marshall Major IV </h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Bezdrátová sluchátka - s mikrofonem, přes hlavu, na uši, uzavřená konstrukce, 3,5 mm Jack, Bluetooth 5.0</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4 ">2 499,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -280,8 +428,7 @@
               <img src="img/Marshal_stockwell.png" class="card-img-top" alt="reproduktor">
               <div class="card-body">
                 <h5 class="card-title">Marshall Stockwell II</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Bluetooth reproduktor - aktivní, o výkonu 20W, frekvenční rozsah od 60 Hz do 20000 Hz, 3,5mm jack</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4 ">5 590,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -294,8 +441,7 @@
               <img src="img/sony.webp" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title">Sony WH-CH720N</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Bezdrátová sluchátka - s mikrofonem, přes hlavu, okolo uší, aktivní potlačení hluku (ANC), uzavřená konstrukce</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4 ">1 990,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -305,11 +451,10 @@
           </div>
           <div class="col">
             <div class="card">
-              <img src="img/jbl_partybox.png" class="card-img-top" alt="Sluchátka">
+              <img src="img/jbl_partybox.png" class="card-img-top" alt="reproduktor">
               <div class="card-body">
                 <h5 class="card-title">JBL PartyBox Encore</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Přenosný party reproduktor se 100W RMS výkonným zvukem, zabudovanou dynamickou světelnou show</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4 ">8 990,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -322,8 +467,7 @@
               <img src="img/airpod-pro.png" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title">Apple AirPods Pro</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <p class="card-text">Bezdrátová sluchátka - s mikrofonem, True Wireless, špunty, aktivní potlačení hluku (ANC), uzavřená konstrukce.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="h4">6 290,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
@@ -333,13 +477,12 @@
           </div>
           <div class="col">
             <div class="card">
-              <img src="img/Marshall_majorIV.png" class="card-img-top" alt="Sluchátka">
+              <img src="img/Marshall_stanmoreIII.png" class="card-img-top" alt="reproduktor">
               <div class="card-body">
-                <h5 class="card-title">Marshall Major IV </h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
+                <h5 class="card-title">Marshall Stanmore III </h5>
+                <p class="card-text">Bluetooth reproduktor - aktivní, o výkonu 80W, frekvenční rozsah od 45 Hz do 20000 Hz, AUX, RCA (cinch) </p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <p class="h4 ">2 499,-</p>
+                    <p class="h4 ">7 990,-</p>
                     <a href="#" class="btn btn-primary">Detail</a>
                   </div>
               </div>
@@ -349,6 +492,8 @@
       </div>
     </div>
   </div>
+
+
 <div class="bg-primary bg-opacity-75 my-5 py-5">
 <div class="container ">
   <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -366,7 +511,7 @@
       <div class="card">
         <img src="img/img1.jpg" class="card-img-top" alt="JBL Sluchátka">
         <div class="card-body">
-          <h3 class="card-title">NEJLEPŠÍ JBL SLUCHÁTKA</h3>
+          <h3 class="card-title">NEJLEPŠÍ SLUCHÁTKA</h3>
           <p class="card-text">Prodlužte si záruku na 3 roky.</p>
           <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
         </div>
@@ -384,7 +529,7 @@
     </div>
     <div class="col">
       <div class="card">
-        <img src="img/img4.jpg" class="card-img-top" alt="...">
+        <img src="img/img4.jpg" class="card-img-top" alt="marshall">
         <div class="card-body">
           <h3 class="card-title">REPRODUKTORY MARSHALL</h3>
           <p class="card-text">Stylové reproduktory Marshall s prvotřídním zvukem.</p>
@@ -396,8 +541,90 @@
 </div>
 </div>
 
-
-
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-xxl-4 row-cols-md-2 g-4 container">
+    <div class="col">
+      <div class="card">
+        <img src="img/Marshall_minorIII.png" class="card-img-top" alt="Sluchátka">
+        <div class="card-body">
+          <h5 class="card-title text-center ">Marshall Minor III</h5>
+          <p class="card-text">Bezdrátová sluchátka - s mikrofonem, True Wireless, pecky, polouzavřená konstrukce</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="h4 ">2 390,-</p>
+            <a href="#" class="btn btn-primary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/airpods4.jpg" class="card-img-top" alt="Sluchátka">
+        <div class="card-body">
+          <h5 class="card-title">Apple AirPods 4</h5>
+          <p class="card-text">Bezdrátová sluchátka - s mikrofonem, True Wireless, pecky, aktivní potlačení hluku (ANC)</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="h4 ">4 990,-</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/jbl_charge5.png" class="card-img-top" alt="reproduktor">
+        <div class="card-body">
+          <h5 class="card-title">JBL Charge 5</h5>
+          <p class="card-text">Bluetooth reproduktor - aktivní, o výkonu 40W, frekvenční rozsah od 65 Hz do 20000 Hz</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="h4 ">3 990,-</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/ult_field7.webp" class="card-img-top mt-2" alt="reproduktor">
+        <div class="card-body">
+          <h5 class="card-title">Sony ULT FIELD 7 </h5>
+          <p class="card-text">Bluetooth reproduktor - aktivní, aktivní subwoofer, frekvenční rozsah od 20 Hz do 20000 Hz</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="h4 ">8 888,-</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/Marshal_stockwell.png" class="card-img-top" alt="reproduktor">
+        <div class="card-body">
+          <h5 class="card-title">Marshall Stockwell II</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="h4 ">5 590,-</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="img/sony.webp" class="card-img-top" alt="Sluchátka">
+        <div class="card-body">
+          <h5 class="card-title">Sony WH-CH720N</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="h4 ">1 990,-</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -431,6 +658,30 @@
     const formattedValue = new Intl.NumberFormat('cs-CZ').format(value);
     document.getElementById('rangeValue').textContent = formattedValue;
   }
+</script>
+
+<script>
+  // JavaScript pro interakci s hvězdičkami
+  const stars = document.querySelectorAll('.star-rating .bi');
+  const ratingValue = document.getElementById('rating-value');
+
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const rating = star.getAttribute('data-value');
+      ratingValue.textContent = rating;
+
+      // Reset předchozích aktivních hvězd
+      stars.forEach(s => s.classList.remove('active'));
+
+      // Nastav aktivní hvězdy
+      star.classList.add('active');
+      let prevSibling = star.previousElementSibling;
+      while (prevSibling) {
+        prevSibling.classList.add('active');
+        prevSibling = prevSibling.previousElementSibling;
+      }
+    });
+  });
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

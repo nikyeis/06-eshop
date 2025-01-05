@@ -9,7 +9,6 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -46,20 +45,24 @@
             <ul class="dropdown-menu">
               <li>
                 <button class="dropdown-item" type="button">
-                  <div class="">
-                    <img src="img/JBL_wave.png" alt="sluchátka" height="50px">
-                    <div class="d-flex flex-column">
-                      <p>JBL Wave 200TWS</p>
-                      <p>1 439,-</p>
-                    </div>
+                  <div class="d-flex align-items-center">
+                  <img src="img/JBL_wave.png" class=" rounded-start" alt="sluchátka" height="50px">
+                  <div class="d-flex flex-column">
+                  <p class="card-title fs-6"><small>JBL Wave 200TWS</small></p>
+                  <p class="card-text fs-6"><small>1 439,-</small></p>
+                  </div>
                   </div>
                 </button>
               </li>
               <li>
                 <button class="dropdown-item" type="button">
-                  <img src="img/JBL_tune_520bt.jpg" alt="sluchátka" height="45px">
-                  <p>JBL Tune 520BT</p>
-                  <p>1 299,-</p>
+                  <div class="d-flex align-items-center">
+                  <img src="img/JBL_tune_520bt.jpg" class=" rounded-start" alt="sluchátka" height="45px">
+                  <div class="d-flex flex-column">
+                  <p class="card-title fs-6"><small>JBL Tune 520BT</small></p>
+                  <p class="card-text fs-6"><small>1 299,-</small> </p>
+                </div>
+                  </div>
                 </button>
               </li>
             </ul>
@@ -394,7 +397,7 @@
         <div class="row row-cols-1 row-cols-xxl-3 row-cols-md-2 g-4 container">
           <div class="col">
             <div class="card">
-              <img src="img/bezdratova-sluchatka-jbl-tune-720bt-cerna.jpg" class="card-img-top" alt="Sluchátka">
+              <img src="img/JBL_tune_720BT.jpg" class="card-img-top" alt="Sluchátka">
               <div class="card-body">
                 <h5 class="card-title text-center ">JBL Tune 720BT</h5>
                 <p class="card-text">Bezdrátová sluchátka - s mikrofonem, přes hlavu, okolo uší, pasivní potlačení
@@ -527,7 +530,7 @@
   <div class="bg-primary bg-opacity-75 my-5 py-5">
     <div class="container ">
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
+        <div class="col my-3">
           <div class="card">
             <img src="img/img2.jpeg" class="card-img-top" alt="Gaming">
             <div class="card-body">
@@ -537,7 +540,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col my-3">
           <div class="card">
             <img src="img/img1.jpg" class="card-img-top" alt="JBL Sluchátka">
             <div class="card-body">
@@ -547,7 +550,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col my-3">
           <div class="card">
             <img src="img/img3.jpg" class="card-img-top" alt="pecky a Špunty">
             <div class="card-body">
@@ -557,7 +560,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col my-3">
           <div class="card">
             <img src="img/img4.jpg" class="card-img-top" alt="marshall">
             <div class="card-body">
@@ -696,28 +699,16 @@
         <div class="col-12 col-md-6 my-3">
           <h3 class="fw-bold">Sledujte nás</h3>
           <div>
-            <img src="img/insta.png" alt="instagram" height="30px">
-            <img src="img/facebook.png" alt="facebook" height="30px">
-            <img src="img/twitter.png" alt="twitter" height="25px">
-            <img src="img/youtube.png" alt="youtube" height="25px">
+            <a href="https://www.instagram.com/"><img src="img/insta.png" alt="instagram" height="30px"></a>
+            <a href="https://www.facebook.com/?locale=cs_CZ"><img src="img/facebook.png" alt="facebook" height="30px"></a>
+            <a href="https://x.com/?lang=cs"><img src="img/twitter.png" alt="twitter" height="25px"></a>
+            <a href="https://www.youtube.com/"><img src="img/youtube.png" alt="youtube" height="25px"></a>
           </div>
 
         </div>
       </div>
     </div>
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-
 
   <script>
     // Toggle Sidebar Visibility
@@ -739,30 +730,6 @@
       const formattedValue = new Intl.NumberFormat('cs-CZ').format(value);
       document.getElementById('rangeValue').textContent = formattedValue;
     }
-  </script>
-
-  <script>
-    // JavaScript pro interakci s hvězdičkami
-    const stars = document.querySelectorAll('.star-rating .bi');
-    const ratingValue = document.getElementById('rating-value');
-
-    stars.forEach(star => {
-      star.addEventListener('click', () => {
-        const rating = star.getAttribute('data-value');
-        ratingValue.textContent = rating;
-
-        // Reset předchozích aktivních hvězd
-        stars.forEach(s => s.classList.remove('active'));
-
-        // Nastav aktivní hvězdy
-        star.classList.add('active');
-        let prevSibling = star.previousElementSibling;
-        while (prevSibling) {
-          prevSibling.classList.add('active');
-          prevSibling = prevSibling.previousElementSibling;
-        }
-      });
-    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

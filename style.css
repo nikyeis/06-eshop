@@ -1,4 +1,8 @@
 .card {border: none;}
 
-body {background-color: rgb(238, 238, 238);}
+.bg-footer {background-color: rgb(228, 228, 228);}
 
+.text-no-deco {text-decoration: none;
+color: rgb(162, 221, 255);}
+
+.card-header {background-color:rgb(228, 228, 228);}

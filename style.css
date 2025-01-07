@@ -23,3 +23,35 @@
 .p-10 {
   padding: 1px;
 }
+
+.star {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  color: #ffc107;
+}
+.star::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+}
+.star::after {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  overflow: hidden;
+  color: #ffc107;
+}
+
+#myCarousel {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#myCarousel .f-carousel__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

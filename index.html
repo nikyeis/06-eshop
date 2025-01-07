@@ -15,7 +15,7 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <img src="..." alt="...">
+      <a href="index.html"><img src="..." alt="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,26 +44,30 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <button class="dropdown-item" type="button">
-                  <div class="d-flex align-items-center">
-                  <img src="img/JBL_wave.png" class=" rounded-start" alt="sluchátka" height="50px">
-                  <div class="d-flex flex-column">
-                  <p class="card-title fs-6"><small>JBL Wave 200TWS</small></p>
-                  <p class="card-text fs-6"><small>1 439,-</small></p>
-                  </div>
-                  </div>
-                </button>
+
+                <div class="d-flex align-items-center">
+                  <button class="dropdown-item" type="button">
+                    <img src="img/JBL_wave.png" class=" rounded-start" alt="sluchátka" height="50px">
+                    <div class="d-flex flex-column">
+                      <p class="card-title fs-6"><small>JBL Wave 200TWS</small></p>
+                      <p class="card-text fs-6"><small>1 439,-</small></p>
+                    </div>
+                  </button>
+                </div>
+
               </li>
               <li>
-                <button class="dropdown-item" type="button">
-                  <div class="d-flex align-items-center">
-                  <img src="img/JBL_tune_520bt.jpg" class=" rounded-start" alt="sluchátka" height="45px">
-                  <div class="d-flex flex-column">
-                  <p class="card-title fs-6"><small>JBL Tune 520BT</small></p>
-                  <p class="card-text fs-6"><small>1 299,-</small> </p>
+
+                <div class="d-flex align-items-center">
+                  <button class="dropdown-item" type="button">
+                    <img src="img/JBL_tune_520bt.jpg" class=" rounded-start" alt="sluchátka" height="45px">
+                    <div class="d-flex flex-column">
+                      <p class="card-title fs-6"><small>JBL Tune 520BT</small></p>
+                      <p class="card-text fs-6"><small>1 299,-</small> </p>
+                    </div>
+                  </button>
                 </div>
-                  </div>
-                </button>
+
               </li>
             </ul>
           </div>
@@ -238,7 +242,7 @@
             <a class="nav-link" href="#">Nejlevnější</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dle hodnocení</a>
+            <a class="nav-link" href="#">Nejdražší</a>
           </li>
         </ul>
 
@@ -394,7 +398,7 @@
       </div>
       <!--Cards-->
       <div class="container my-5">
-        <div class="row row-cols-1 row-cols-xxl-3 row-cols-md-2 g-4 container">
+        <div class="row row-cols-1 row-cols-xxl-3 row-cols-md-2">
           <div class="col">
             <div class="card">
               <img src="img/JBL_tune_720BT.jpg" class="card-img-top" alt="Sluchátka">
@@ -404,7 +408,7 @@
                   hluku, uzavřená konstrukce</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="h4 ">1 990,-</p>
-                  <a href="#" class="btn btn-primary">Detail</a>
+                  <a href="detail.html" class="btn btn-primary">Detail</a>
                 </div>
               </div>
             </div>
@@ -535,7 +539,7 @@
             <img src="img/img2.jpeg" class="card-img-top" alt="Gaming">
             <div class="card-body">
               <h3 class="card-title">HERNÍ SLUCHÁTKA</h3>
-              <p class="card-text">Zvuk, se kterým přežiješ.</p>
+              <p class="card-text d-none d-md-block">Zvuk, se kterým přežiješ.</p>
               <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
             </div>
           </div>
@@ -545,7 +549,7 @@
             <img src="img/img1.jpg" class="card-img-top" alt="JBL Sluchátka">
             <div class="card-body">
               <h3 class="card-title">NEJLEPŠÍ SLUCHÁTKA</h3>
-              <p class="card-text">Prodlužte si záruku na 3 roky.</p>
+              <p class="card-text d-none d-md-block">Prodlužte si záruku na 3 roky.</p>
               <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
             </div>
           </div>
@@ -555,7 +559,7 @@
             <img src="img/img3.jpg" class="card-img-top" alt="pecky a Špunty">
             <div class="card-body">
               <h3 class="card-title">CHCETE PECKY NEBO ŠPUNTY?</h3>
-              <p class="card-text">Pecky nebo špunty? Vyberte si svůj styl poslechu!</p>
+              <p class="card-text d-none d-md-block">Pecky nebo špunty? Vyberte si svůj styl poslechu!</p>
               <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
             </div>
           </div>
@@ -565,7 +569,7 @@
             <img src="img/img4.jpg" class="card-img-top" alt="marshall">
             <div class="card-body">
               <h3 class="card-title">REPRODUKTORY MARSHALL</h3>
-              <p class="card-text">Stylové reproduktory Marshall s prvotřídním zvukem.</p>
+              <p class="card-text d-none d-md-block">Stylové reproduktory Marshall s prvotřídním zvukem.</p>
               <button type="button" class="btn btn-primary text-center my-3">Zobrazit nabítku</button>
             </div>
           </div>
@@ -700,7 +704,8 @@
           <h3 class="fw-bold">Sledujte nás</h3>
           <div>
             <a href="https://www.instagram.com/"><img src="img/insta.png" alt="instagram" height="30px"></a>
-            <a href="https://www.facebook.com/?locale=cs_CZ"><img src="img/facebook.png" alt="facebook" height="30px"></a>
+            <a href="https://www.facebook.com/?locale=cs_CZ"><img src="img/facebook.png" alt="facebook"
+                height="30px"></a>
             <a href="https://x.com/?lang=cs"><img src="img/twitter.png" alt="twitter" height="25px"></a>
             <a href="https://www.youtube.com/"><img src="img/youtube.png" alt="youtube" height="25px"></a>
           </div>

@@ -154,7 +154,10 @@
 
   </section>
   <div class="container">
-
+<div>
+  <p>Celkem bez DPH</p>
+  <p>5 315</p>
+</div>
     <div class="text-end my-3">
       <a href="#" class="btn-primary btn">Pokračovat</a>
     </div>
@@ -230,6 +233,40 @@
       let currentQuantity = parseInt(quantityInput.value);
       if (currentQuantity > 1) {
         quantityInput.value = currentQuantity - 1;
+      }
+    });
+    const quantityInput1 = document.getElementById('quantity1');
+    const increaseButton1 = document.getElementById('increase1');
+    const decreaseButton1 = document.getElementById('decrease1');
+
+    // Funkce pro zvýšení počtu
+    increaseButton1.addEventListener('click', function () {
+      let currentQuantity1 = parseInt(quantityInput1.value);
+      quantityInput1.value = currentQuantity1 + 1;
+    });
+
+    // Funkce pro snížení počtu
+    decreaseButton1.addEventListener('click', function () {
+      let currentQuantity1 = parseInt(quantityInput1.value);
+      if (currentQuantity1 > 1) {
+        quantityInput1.value = currentQuantity1 - 1;
+      }
+    });
+    const quantityInput2 = document.getElementById('quantity2');
+    const increaseButton2 = document.getElementById('increase2');
+    const decreaseButton2 = document.getElementById('decrease2');
+
+    // Funkce pro zvýšení počtu
+    increaseButton2.addEventListener('click', function () {
+      let currentQuantity2 = parseInt(quantityInput2.value);
+      quantityInput2.value = currentQuantity2 + 1;
+    });
+
+    // Funkce pro snížení počtu
+    decreaseButton2.addEventListener('click', function () {
+      let currentQuantity2 = parseInt(quantityInput2.value);
+      if (currentQuantity2 > 1) {
+        quantityInput2.value = currentQuantity2 - 1;
       }
     });
   </script>

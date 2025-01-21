@@ -57,3 +57,43 @@
   justify-content: center;
   align-items: center;
 }
+
+.step {
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.step .circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #d6d6d6;
+  color: white;
+  font-weight: bold;
+}
+
+.step.active .circle {
+  background-color: #007bff;
+}
+
+.step-line {
+  width: 50px;
+  border-top: 2px solid #d6d6d6;
+  margin: 0;
+}
+
+.step .circle.active + .step-line {
+  border-color: #007bff;
+}
+
+.step:hover .circle {
+  background-color: #0056b3;
+  color: white;
+}
+
+.step.active span {
+  font-weight: bold;
+  color: #007bff;
+}

@@ -232,28 +232,20 @@
     <!-- Main Content -->
     <div class="flex-grow-1 p-3">
 
-      <!--Řazení-->
-      <div class="container">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Doporučujeme</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nejlevnější</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nejdražší</a>
-          </li>
-        </ul>
+      <select class="form-select" aria-label="Default select example">
+        <div class="col-md-4">
+        <option selected>Řazení</option>
+        <option value="1">Doporučujeme</option>
+        <option value="2">Nejlevnější</option>
+        <option value="3">Nejdražší</option>
+        </div>
+      </select>
 
         <div class=" d-sm-none d-block">
           <button class="btn btn-outline-primary my-4" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
             Filtrace
           </button>
-
-
-
 
           <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop">
             <div class="offcanvas-header">
@@ -527,7 +519,6 @@
         </div>
       </div>
     </div>
-  </div>
 
 
   <div class="bg-primary bg-opacity-75 my-5 py-5">
